@@ -97,12 +97,8 @@ terraform apply
 - Terraformによる環境構築だけではなく、手動によるサーバ構築も行うことで、  
  コードによるインフラ管理の利便性、冪等性を体感した。
 - EC2インスタンス上のTerraform実行サーバからTerraformコマンドを実行することで、  
- AWS IAMユーザのアクセスキー管理をしないより安全な設計にした。
+ AWS IAMユーザのアクセスキー管理をしない、より安全な設計にした。
 - `terraform fmt`コマンドによりインデント修正を行い、可読性を向上した。
-  ``` 
-  # コマンド例
-  terraform fmt /root/terraform/vpc.tf
-  ```
 
 
 
