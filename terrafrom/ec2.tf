@@ -30,3 +30,12 @@ resource "aws_security_group_rule" "https" {
   protocol          = "tcp"
   cidr_blocks       = ["{hogehoge}/32"] # 家のグローバルIP
 }
+
+resource "aws_security_group_rule" "outbound" {
+  security_group_id = aws_security_group.ec2.id
+  type              = "egress"
+  to_port           = 0
+  from_port         = 0
+  protocol          = "-1"
+  cidr_blocks       = ["0.0.0.0/0"]
+}
